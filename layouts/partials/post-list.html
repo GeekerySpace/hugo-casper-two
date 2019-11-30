@@ -1,5 +1,5 @@
 {{- $pctx := . -}}{{- if .IsHome -}}{{- $pctx = .Site -}}{{- end -}}
-{{ $paginator := .Paginate (where $pctx.RegularPages.ByDate.Reverse "Type" "post") }}
+{{ $paginator := .Paginate (where $pctx.RegularPages "Type" "post").ByDate.Reverse }}
 {{ range $paginator.Pages }}
 
 <article class="post-card post">
