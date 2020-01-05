@@ -5,7 +5,7 @@ description = "Port of Casper 2.x from Ghost Foundation"
 homepage = "https://github.com/eueung/hugo-casper-two"
 tags = ["blog","pages","ghost theme"]
 features = ["disqus", "google analytics"]
-min_version=0.31
+min_version=0.57
 
 [author]
   name = "Eueung Mulyana"
