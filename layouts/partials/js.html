@@ -1,8 +1,14 @@
+{{- $hljs := default .Site.Params.highlightJS .Params.highlightJS }}
+{{- if $hljs }}
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+{{- end }}
+
 <script type="text/javascript" src="//code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="{{ "js/jquery.fitvids.js" | absURL}}"></script>
 
+{{- if $hljs }}
 <script>hljs.initHighlightingOnLoad();</script>
+{{- end }}
 
 {{ with .Site.Params.googleAnalytics }}
   {{ "<!-- Google Analytics -->" | safeHTML }}

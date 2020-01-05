@@ -3,6 +3,7 @@ title: Showcase
 draft: true
 image: img/writing.jpg
 markup: mmark
+highlightJS: off
 menu:
   main:
     name: Showcase

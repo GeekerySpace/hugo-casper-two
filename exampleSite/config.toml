@@ -6,10 +6,14 @@ paginate        = 6
 #SectionPagesMenu = "main"
 canonifyurls    = true
 
+# pygmentsCodeFences = true # activate Hugo's built-in syntax highlighting (pre Hugo-0.6)
+
 [params]
   title       = "Hugo Casper Two"
   subtitle    = "Port of Casper 2.x for Hugo"
   copyright   = "© 2018"
+
+  highlightJS = true # Use hightlich JS? Turn off if pygmentsCodeFences = true
 
   cover       = "img/blog-cover.jpg"
   description = "Here is a description of your site."

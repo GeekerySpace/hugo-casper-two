@@ -74,3 +74,11 @@
 .post-full-content pre code {
     color: #e5eff5;
 }
+
+.highlight {
+  width: 100%;
+}
+
+.highlight > pre {
+  background: #0e0f11 !important;
+}
