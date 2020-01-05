@@ -1,4 +1,4 @@
-{{ $disqusPageIDs := default .Site.Params.disqusPageIDs .Params.disqusPageIDs }}
+{{ $disqusPageIDs := not (default .Site.Params.disqusNoPageIDs .Params.disqusNoPageIDs) }}
 {{ if $disqusPageIDs -}}
 <script>console.log('with page IDs on "{{.Params.Title}}"');</script>
 {{ else -}}

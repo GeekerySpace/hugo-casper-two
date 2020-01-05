@@ -11,7 +11,7 @@ title: Creating a New Theme
 weight: 10
 image: img/welcome.jpg
 authorAvatar: hugo-logo.png
-disqusPageIDs: off
+disqusNoPageIDs: on
 ---
 
 
