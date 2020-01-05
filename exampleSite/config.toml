@@ -15,6 +15,12 @@ canonifyurls    = true
 
   highlightJS = true # Use hightlich JS? Turn off if pygmentsCodeFences = true
 
+  # Disquss: Whether to use page identifiers or not.
+  #   Not using them is easier for testing, but risks split and duplicate threads.
+  #   See https://help.disqus.com/en/articles/1717137-use-configuration-variables-to-avoid-split-threads-and-missing-comments
+  #   This can also be set per page, which is probably safer for the above reasons.
+  # disqusNoPageIDs = true
+
   cover       = "img/blog-cover.jpg"
   description = "Here is a description of your site."
   metaDescription = ""
