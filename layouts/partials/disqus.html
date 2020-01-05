@@ -1,11 +1,6 @@
-{{ $disqusPageIDs := not (default .Site.Params.disqusNoPageIDs .Params.disqusNoPageIDs) }}
-{{ if $disqusPageIDs -}}
-<script>console.log('with page IDs on "{{.Params.Title}}"');</script>
-{{ else -}}
-<script>console.log('NO page IDs on "{{.Params.Title}}"');</script>
-{{ end -}}
 {{ if ne .Params.comments false}}
 {{ if .Site.DisqusShortname }}
+{{ $disqusPageIDs := not (default .Site.Params.disqusNoPageIDs .Params.disqusNoPageIDs) }}
 <div id="disqus_thread"></div>
 <script>
 
