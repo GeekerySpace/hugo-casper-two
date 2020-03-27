@@ -1,0 +1,8 @@
+{{- $thumbUrl := .Params.image -}}
+{{- if $thumbUrl -}}
+{{- $thumbUrl = $thumbUrl | absURL -}}
+{{- else -}}
+{{- $defImgIndex := index (seq 7 | shuffle) 0 -}}
+{{- $thumbUrl = print $.Site.BaseURL "defimg/" $defImgIndex ".jpg" -}}
+{{- end -}}
+{{- $thumbUrl -}}
