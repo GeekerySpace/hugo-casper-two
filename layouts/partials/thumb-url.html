@@ -2,7 +2,8 @@
 {{- if $thumbUrl -}}
 {{- $thumbUrl = $thumbUrl | absURL -}}
 {{- else -}}
-{{- $defImgIndex := index (seq 7 | shuffle) 0 -}}
+{{/*- $defImgIndex := mod (add (len .Content) (len .Title)) 7 | add 1 -*/}}
+{{- $defImgIndex := mod (substr (md5 .Title) 25 7 | print "0x" | int) 7 | add 1 }}
 {{- $thumbUrl = print $.Site.BaseURL "defimg/" $defImgIndex ".jpg" -}}
 {{- end -}}
 {{- $thumbUrl -}}
