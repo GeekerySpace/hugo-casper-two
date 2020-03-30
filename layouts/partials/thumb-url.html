@@ -1,0 +1,7 @@
+{{- with .Params.image -}}
+{{- . | absURL -}}
+{{- else -}}
+{{/*- $defImgIndex := mod (add (len .Content) (len .Title)) (default 7 $.Site.Params.defImgCount) | add 1 -*/}}
+{{- $defImgIndex := mod (substr (md5 .Title) 25 7 | print "0x" | int) (default 7 $.Site.Params.defImgCount) | add 1 -}}
+{{ $.Site.BaseURL }}defimg/{{ $defImgIndex }}.jpg
+{{- end -}}
