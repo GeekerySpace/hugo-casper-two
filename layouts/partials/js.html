@@ -10,6 +10,10 @@
 <script>hljs.initHighlightingOnLoad();</script>
 {{- end }}
 
+{{- range .Site.Params.customJS }}{{/* deliberately avoiding `. | absURL` to enable use of `/path/to/script` */}}
+<script src="{{ . }}"></script>
+{{- end }}
+
 {{ with .Site.Params.googleAnalytics }}
   {{ "<!-- Google Analytics -->" | safeHTML }}
   <script>

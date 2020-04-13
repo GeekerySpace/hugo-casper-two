@@ -26,6 +26,7 @@ canonifyurls    = true
   metaDescription = ""
   googleAnalytics = ""
   customCSS = []
+  customJS = []
   RSSLink = ""
 
   twitterName = "faketryghost"
