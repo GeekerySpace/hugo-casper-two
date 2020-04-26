@@ -9,7 +9,11 @@
               {{if .Params.tags }}<span class="post-card-tags">{{ range $index, $tag := .Params.tags }}
               #{{$tag}} {{end}} </span>
               {{ end }}
-              <h2 class="post-card-title">{{.Title}}</h2>
+              <h2 class="post-card-title">{{.Title}}
+                {{- with .Params.SubTitle -}}
+                  <br/><small>{{ . }}</small>
+                {{- end -}}
+              </h2>
           </header>
       </a>
       <section class="post-card-excerpt" style="padding: 0 25px;">

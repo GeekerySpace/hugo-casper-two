@@ -1,11 +1,14 @@
-<article class="post-full post page no-image"> 
+<article class="post-full post page no-image">
     <header class="post-full-header">
         <h1 class="post-full-title">{{.Title | title}}</h1>
+        {{- with .Params.SubTitle -}}
+          <h3>{{ . }}</h3>
+        {{- end -}}
     </header>
 
     <section class="post-full-content">
         <div class="kg-card-markdown">
-        {{ .Content }}    
+        {{ .Content }}
         </div>
     </section>
 </article>
