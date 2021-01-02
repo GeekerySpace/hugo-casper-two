@@ -1,5 +1,7 @@
 .PHONY: build clean clobber demo
 
+PORT ?= 1313
+
 SOURCES := $(shell find _src -type f \( -name '*.coffee' -o -name '*.sass' \))
 TARGETS := $(SOURCES:_src/%=%)
 TARGETS := $(TARGETS:%.coffee=%.js)
@@ -8,7 +10,7 @@ TARGETS := $(TARGETS:%.sass=%.css)
 build: $(TARGETS)
 
 demo: build
-	hugo serve -D -s exampleSite --themesDir ../../
+	hugo serve -D -p $(PORT) -s exampleSite --themesDir ../../
 
 clean:
 	-cd exampleSite && rm -r resources public
