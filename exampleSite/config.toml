@@ -25,7 +25,7 @@ canonifyurls    = true
   description = "Here is a description of your site."
   metaDescription = ""
   googleAnalytics = ""
-  customCSS = []
+  customCSS = ["css/casper-two-fixups.css"]
   customJS = []
   RSSLink = ""
 
